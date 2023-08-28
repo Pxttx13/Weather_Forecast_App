@@ -139,9 +139,9 @@
         const response = await fetch(`${apiUrl}?q=${city}&appid=${apiSecret}`);
         const data = await response.json();
 
-        document.querySelector(".city").innerHTML = data.name;
         document.querySelector(".temperature").innerHTML =
-          parseInt(data.main.temp).toString() + " °C";
+          (parseInt(data.main.temp) - 273.15).toFixed(2) + " °C";
+
         document.querySelector(".humidity").innerHTML =
           data.main.humidity + "%";
         document.querySelector(".pressure").innerHTML =
