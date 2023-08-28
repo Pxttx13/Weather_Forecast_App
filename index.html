@@ -29,7 +29,7 @@
               class="weatherIcon"
             />
             <h1 class="temperature">28°C</h1>
-            <h2 class="city">Assam</h2>
+            <h2 class="city">Mysore</h2>
           </div>
           <div class="details">
             <div class="col">
@@ -139,15 +139,20 @@
         const response = await fetch(`${apiUrl}?q=${city}&appid=${apiSecret}`);
         const data = await response.json();
 
+        document.querySelector(".city").innerHTML = data["name"];
+
         document.querySelector(".temperature").innerHTML =
           (parseInt(data.main.temp) - 273.15).toFixed(2) + " °C";
 
         document.querySelector(".humidity").innerHTML =
           data.main.humidity + "%";
+
         document.querySelector(".pressure").innerHTML =
           data.main.pressure + " Pa";
+
         document.querySelector(".wind-speed").innerHTML =
           data.wind.speed + " KM/H";
+
         document.querySelector(
           ".weatherIcon"
         ).src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
