@@ -124,22 +124,35 @@ body {
     display: none;
     flex-direction: row;
 }
-.copyright {
+/* .copyright {
     width: 100%;
     text-align: center;
     padding: 25px 0;
     background: #ffffff;
     font-weight: 300;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 .copyright i {
     color: #ff004f;
     transition: color 0.5s;
-}
-/* -------------------css for small screen--------- */
-/* Your existing styles */
+} */
 
-/* Adjustments for small screens */
+    .copyright {
+    text-align: center; /* Align the text in the center */
+    font-size: 14px; /* Set the font size */
+    color: #999999; /* Set the text color */
+    margin-top: 20px; /* Add some space at the top */
+    }
+    .copyright p {
+    margin-bottom: 50px; /* Remove any margin below the paragraph */
+    }
+    .fas.fa-heart {
+    color: red; /* Set the heart icon color */
+    }
+
+
+/* -------------------css for small screen--------- */
+
 @media screen and (max-width: 768px) {
     body {
         body {
@@ -151,7 +164,7 @@ body {
     }
     
     .card {
-        width: 90%;
+        width: 100%;
         max-width: none;
     }
     
@@ -210,5 +223,4 @@ body {
 }
 .copyright{
     font-size: 14px;
-    width: 50%;
 }
