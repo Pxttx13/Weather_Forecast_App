@@ -124,19 +124,6 @@ body {
     display: none;
     flex-direction: row;
 }
-/* .copyright {
-    width: 100%;
-    text-align: center;
-    padding: 25px 0;
-    background: #ffffff;
-    font-weight: 300;
-    margin-top: 20px;
-}
-.copyright i {
-    color: #ff004f;
-    transition: color 0.5s;
-} */
-
     .copyright {
     text-align: center; /* Align the text in the center */
     font-size: 14px; /* Set the font size */
@@ -164,7 +151,7 @@ body {
     }
     
     .card {
-        width: 100%;
+        width: 90%;
         max-width: none;
     }
     
